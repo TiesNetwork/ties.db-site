@@ -1,0 +1,19 @@
+.Root {
+  align-items: center;
+  color: #2C3E4F;
+  display: flex;
+  flex-direction: column;
+  padding: 160px 24px;
+}
+
+.Container {
+  max-width: 1100px;
+  width: 100%;
+}
+
+.Title {
+  font-size: 44px;
+  font-weight: 600;
+  margin-bottom: 60px;
+  max-width: 1100px;
+}

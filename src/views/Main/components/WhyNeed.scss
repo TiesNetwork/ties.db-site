@@ -1,0 +1,49 @@
+.Item {
+  display: flex;
+  margin-top: 120px;
+
+  &:nth-child(even) {
+    flex-direction: row-reverse;
+  }
+
+  &Actions {
+    margin-top: 56px;
+  }
+
+  &Left {
+    flex: 0 0 50%;
+  }
+
+  &Description {
+    font-weight: 600;
+    line-height: 24px;
+    margin-top: 28px;
+  }
+
+  &Link {
+    align-items: center;
+    background: #C92A3E;
+    border-radius: 20px;
+    color: #FFFFFF;
+    display: flex;
+    justify-content: center;
+    height: 48px;
+    text-decoration: none;
+    width: 256px;
+  }
+
+  &Preface {
+    line-height: 24px;
+    margin-top: 20px;
+  }
+
+  &Right {
+    flex: 0 0 50%;
+  }
+
+  &Title {
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 32px;
+  }
+}

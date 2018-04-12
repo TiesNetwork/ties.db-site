@@ -1,0 +1,72 @@
+.Root {
+  background-color: #EAEEF2;
+}
+
+.Actions {
+  display: flex;
+  justify-content: center;
+  margin-top: 80px;
+
+  &Link {
+    align-items: center;
+    background-color: #FFFFFF;
+    border-radius: 20px;
+    color: inherit;
+    display: flex;
+    height: 48px;
+    justify-content: center;
+    text-decoration: none;
+    width: 184px;
+
+    &:hover {
+      background-color: #C92A3E;
+      color: #FFFFFF;
+    }
+
+    &:not(:first-child) {
+      margin-left: 28px;
+    }
+  }
+}
+
+.Feature {
+  align-items: center;
+  display: flex;
+  flex: 1 1 auto;
+  flex-direction: column;
+  
+  &Description {
+    line-height: 24px;
+    text-align: center;
+    max-width: 280px;
+  }
+
+  &Icon {
+    background-color: #2C3E4F;
+    height: 64px;
+    margin-bottom: 36px;
+    width: 64px;
+  }
+
+  &Title {
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 30px;
+    margin-bottom: 16px;
+  }
+}
+
+.Features {
+  display: flex;
+  justify-content: center;
+}
+
+.More {
+  display: flex;
+  justify-content: center;
+  margin-top: 36px;
+
+  &Link {
+    color: inherit;
+  }
+}
