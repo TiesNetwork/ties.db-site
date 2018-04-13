@@ -63,6 +63,29 @@ const initialState = {
       title: 'SEARCH AND DOWNLOAD',
     },
   ],
+  media: [
+    {
+      date: '01.09.2017',
+      description: 'As a business tool, Ties.Network enables members to securely connect and transact with top-rated industry professionals. Users collaborate on projects, receive counsel from industry experts and instantly strike deals via smart contracts.',
+      icon: '',
+      link: 'https://cointelegraph.com/news/tiesnetwork-promises-the-enhanced-linkedin-of-crypto-community',
+      title: 'Ties.Network Promises the Enhanced LinkedIn of Crypto- Community',
+    },
+    {
+      date: '25.08.2017',
+      description: 'We need confirmed experts in crypto-investment. People who’ve already made a number of correct investment decisions and can help others do the same.',
+      icon: '',
+      link: 'https://themerkle.com/ties-network-announces-token-generation-event-tge/',
+      title: 'Ties.Network Announces Token Generation Event (TGE)',
+    },
+    {
+      date: '08.09.2017',
+      description: 'We need confirmed experts in crypto-investment. People who’ve already made a number of correct investment decisions and can help others do the same. ',
+      icon: '',
+      link: 'http://www.coinfox.info/news/7587-how-do-you-know-who-to-trust-in-the-world-of-icos-and-cryptocurrencies-ties-network-offers-one-possible-solution',
+      title: 'How do you know who to trust in the world of ICOs and cryptocurrencies - Ties.Network offers one possible solution ',
+    },
+  ],
   partners: [
     {
       link: 'https://diwtoken.com/',
@@ -173,6 +196,43 @@ const initialState = {
       from: '2019-01-01',
       title: 'Q1 2019',
       to: '2019-03-31',
+    },
+  ],
+  social: [
+    {
+      icon: require('../assets/social/facebook.svg'),
+      link: 'https://facebook.com',
+      title: 'Facebook',
+    },
+    {
+      icon: require('../assets/social/linkedin.svg'),
+      link: 'https://linkedin.com/',
+      title: 'LinkedIn',
+    },
+    {
+      icon: require('../assets/social/twitter.svg'),
+      link: 'https://twitter.com',
+      title: 'Twitter',
+    },
+    {
+      icon: require('../assets/social/youtube.svg'),
+      link: 'https://youtube.com',
+      title: 'YouTube',
+    },
+    {
+      icon: require('../assets/social/reddit.svg'),
+      link: 'https://reddit.com',
+      title: 'Reddit',
+    },
+    {
+      icon: require('../assets/social/github.svg'),
+      link: 'https://github.com',
+      title: 'GitHub',
+    },
+    {
+      icon: require('../assets/social/bitcoin.svg'),
+      link: 'https://facebook.com',
+      title: 'Bitcoin',
     },
   ],
   whyNeed: [

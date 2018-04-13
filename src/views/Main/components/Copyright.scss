@@ -27,11 +27,17 @@
   flex-direction: column;
 }
 
+.Logo {
+  height: 32px;
+}
+
 .Social {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
   font-size: 14px;
 
   &Link {
-    background: #2C3E4F;
     display: block;
     height: 24px;
     width: 24px;
@@ -48,6 +54,6 @@
 }
 
 .Wrapper {
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
 }

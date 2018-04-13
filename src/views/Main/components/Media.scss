@@ -1,0 +1,29 @@
+.Root {
+  background: #EAEEF2;
+}
+
+.Item {
+  &Date {
+    font-size: 14px;
+    margin-top: 24px;
+  }
+
+  &Description {
+    font-size: 16px;
+    line-height: 24px;
+    margin-top: 24px;
+  }
+
+  &Title {
+    color: inherit;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 32px;
+  }
+}
+
+.List {
+  display: grid;
+  grid-column-gap: 80px;
+  grid-template-columns: repeat(3, 1fr);
+}

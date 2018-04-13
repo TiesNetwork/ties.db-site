@@ -1,14 +1,24 @@
+import { get } from 'lodash';
 import React from 'react';
+import { connect } from 'react-redux';
 
 /** Components **/
 import Block from 'components/Block';
 
 import styles from './Copyright.scss';
 
-const MainCopyright = ({ cases }) => (
+const MainCopyright = ({ social }) => (
   <Block className={styles.Root}>
     <div className={styles.Wrapper}>
       <div className={styles.Company}>
+        <a href="/">
+          <img
+            alt="Ties.DB"
+            className={styles.Logo}
+            src={require('../assets/logo_dark.svg')}
+          />
+        </a>
+
         <div className={styles.CompanyInfo}>
           Ties.BV. Limited liability company. KvK-nummer: 69555176
         </div>
@@ -18,13 +28,19 @@ const MainCopyright = ({ cases }) => (
         Got questions? Ask us on our channel
 
         <div className={styles.SocialList}>
-          <a className={styles.SocialLink} href="/" />
-          <a className={styles.SocialLink} href="/" />
-          <a className={styles.SocialLink} href="/" />
-          <a className={styles.SocialLink} href="/" />
-          <a className={styles.SocialLink} href="/" />
-          <a className={styles.SocialLink} href="/" />
-          <a className={styles.SocialLink} href="/" />
+          {social.map(({ icon, link, title }, index) => (
+            <a
+              className={styles.SocialLink}
+              href={link}
+              key={index}
+              target="_blank"
+            >
+              <img
+                alt={link}
+                src={icon}
+              />
+            </a>
+          ))}
         </div>
       </div>
 
@@ -41,4 +57,8 @@ const MainCopyright = ({ cases }) => (
   </Block>
 )
 
-export default MainCopyright;
+const mapStateToProps = ({ views }) => ({
+  social: get(views, 'main.social', []),
+})
+
+export default connect(mapStateToProps)(MainCopyright);
