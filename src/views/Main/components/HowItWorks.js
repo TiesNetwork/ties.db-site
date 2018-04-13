@@ -1,53 +1,36 @@
+import { get } from 'lodash';
 import React from 'react';
+import { connect } from 'react-redux';
 
 /** Components **/
 import Block from 'components/Block';
 
 import styles from './HowItWorks.scss';
 
-const MainHowItWorks = () => (
+const MainHowItWorks = ({ items }) => (
   <Block
     className={styles.Root}
     title="How it works"
   >
     <div className={styles.List}>
-      <div className={styles.Item}>
-        <div className={styles.ItemIcon} />
+      {items.map(({ description, icon, title }, index) => (
+        <div className={styles.Item} key={index}>
+          <div className={styles.ItemIcon}>
+            <img
+              alt={title}
+              src={icon}
+            />
+          </div>
 
-        <div className={styles.ItemTitle}>
-          NETWORK ARRANGEMENT
+          <div className={styles.ItemTitle}>
+            {title}
+          </div>
+
+          <div className={styles.ItemDescription}>
+            {description}
+          </div>
         </div>
-
-        <div className={styles.ItemDescription}>
-          Все предоставляемые серверы объеденены в&nbsp;одну систему.
-        </div>
-      </div>
-
-      <div className={styles.Item}>
-        <div className={styles.ItemIcon} />
-
-        <div className={styles.ItemTitle}>
-          UPLOAD
-        </div>
-
-        <div className={styles.ItemDescription}>
-          Кто угодно может разместить контент.
-          Он&nbsp;распределяется по&nbsp;разным серверам.
-        </div>
-      </div>
-
-      <div className={styles.Item}>
-        <div className={styles.ItemIcon} />
-
-        <div className={styles.ItemTitle}>
-          SEARCH AND DOWNLOAD
-        </div>
-
-        <div className={styles.ItemDescription}>
-          Кто угодно может запросить контент
-          и&nbsp;он&nbsp;соберется в&nbsp;единое целое.
-        </div>
-      </div>
+      ))}
     </div>
 
     <div className={styles.Actions}>
@@ -58,4 +41,8 @@ const MainHowItWorks = () => (
   </Block>
 )
 
-export default MainHowItWorks;
+const mapStateToProps = ({ views }) => ({
+  items: get(views, 'main.howItWorks', []),
+})
+
+export default connect(mapStateToProps)(MainHowItWorks);

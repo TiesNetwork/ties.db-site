@@ -13,9 +13,13 @@ const MainCases = ({ cases }) => (
     title="Ties.DB application cases"
   >
     <div className={styles.List}>
-      {cases.map(({ title }, index) => (
+      {cases.map(({ icon, title }, index) => (
         <div className={styles.Item} key={index}>
-          <div className={styles.ItemIcon} />
+          <img
+            alt={title}
+            className={styles.ItemIcon}
+            src={icon}
+          />
 
           <div className={styles.ItemTitle}>
             {title}

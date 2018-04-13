@@ -1,25 +1,66 @@
 const initialState = {
   cases: [
     {
+      icon: require('../assets/cases/data.svg'),
       title: 'BIG DATA',
     },
     {
+      icon: require('../assets/cases/knowledge.svg'),
       title: 'KNOWLEDGE CASES',
     },
     {
+      icon: require('../assets/cases/social.svg'),
       title: 'SOCIAL NETWORKS',
     },
     {
+      icon: require('../assets/cases/docs.svg'),
       title: 'OPEN DOCUMENTS REGISTRIES',
     },
     {
+      icon: require('../assets/cases/media.svg'),
       title: 'MASS MEDIA',
     },
     {
+      icon: require('../assets/cases/storage.svg'),
       title: 'DATA STORAGE',
     },
     {
+      icon: require('../assets/cases/sharing.svg'),
       title: 'FILE SHARING',
+    },
+  ],
+  features: [
+    {
+      description: 'The absence of a single center control and failure, a completely self–organized network.',
+      icon: require('../assets/features/decentralization.svg'),
+      title: 'DECENTRALIZATION',
+    },
+    {
+      description: 'Parallel operation of many servers ensures high speed of processing requests.',
+      icon: require('../assets/features/search.svg'),
+      title: 'ADVANCED SEARCH',
+    },
+    {
+      description: 'Ability to edit and delete previously posted data for their owner.',
+      icon: require('../assets/features/modifable.svg'),
+      title: 'MODIFIABLE',
+    },
+  ],
+  howItWorks: [
+    {
+      description: 'Все предоставляемые серверы объеденены в одну систему.',
+      icon: require('../assets/how_it_works/network.svg'),
+      title: 'NETWORK ARRANGEMENT',
+    },
+    {
+      description: 'Кто угодно может разместить контент. Он распределяется по разным серверам.',
+      icon: require('../assets/how_it_works/upload.svg'),
+      title: 'UPLOAD',
+    },
+    {
+      description: 'Кто угодно может запросить контент и он соберется в единое целое.',
+      icon: require('../assets/how_it_works/download.svg'),
+      title: 'SEARCH AND DOWNLOAD',
     },
   ],
   partners: [
@@ -132,6 +173,38 @@ const initialState = {
       from: '2019-01-01',
       title: 'Q1 2019',
       to: '2019-03-31',
+    },
+  ],
+  whyNeed: [
+    {
+      description: 'Ties.DB servers are completely independent, scattered across the planet and accept payment in the crypto currency (TIE-token), which gives dapps-y very flexible options for working with the network Ties.DB.',
+      icon: require('../assets/why_need/daaps.svg'),
+      link: {
+        href: '/',
+        title: 'BE 100% DECENTRALIZED',
+      },
+      preface: 'Centralized storage solutions are vulnerable. Decentralized solutions used Today, they do not allow a quick search and modification of data.',
+      title: 'DAPPS',
+    },
+    {
+      description: 'We take from a concrete block system data encryption to generate keys in the signature and suggest that the creation of decentralized applications for This block, announcing that the data will be stored in Ties.DB.',
+      icon: require('../assets/why_need/blockchains.svg'),
+      link: {
+        href: '/',
+        title: 'BE 100% COMPETITIVE',
+      },
+      preface: 'Today there is no effective storage solution data that entails the difficulty of attracting and hold dApps.',
+      title: 'BLOCKCHAINS',
+    },
+    {
+      description: 'Large projects can store Ties.DB file indexes, and in the future, store in Ties.DB and the files themselves. Any large project can make a fork of Ties.DB network to store data in a separate network.',
+      icon: require('../assets/why_need/international.svg'),
+      link: {
+        href: '/',
+        title: 'BE 100% BOUNDLESS',
+      },
+      preface: 'It is difficult to build self-service today cross-border infrastructure.',
+      title: 'INTERNATIONAL PROJECTS',
     },
   ],
 }

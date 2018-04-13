@@ -11,13 +11,21 @@
   }
 
   &Left {
-    flex: 0 0 50%;
+    align-items: center;
+    display: flex;
+    flex: 0 0 60%;
+    justify-content: center;
   }
 
   &Description {
     font-weight: 600;
     line-height: 24px;
     margin-top: 28px;
+  }
+
+  &Icon {
+    max-width: 420px;
+    width: 100%;
   }
 
   &Link {
@@ -38,7 +46,7 @@
   }
 
   &Right {
-    flex: 0 0 50%;
+    flex: 0 0 40%;
   }
 
   &Title {

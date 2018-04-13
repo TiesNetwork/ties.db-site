@@ -1,54 +1,35 @@
+import { get } from 'lodash';
 import React from 'react';
+import { connect } from 'react-redux';
 
 /** Components **/
 import Block from 'components/Block';
 
 import styles from './Features.scss';
 
-const MainFeatures = () => (
+const MainFeatures = ({ features }) => (
   <Block
     className={styles.Root}
     title="Key features of Ties.DB"
   >
     <div className={styles.Features}>
-      <div className={styles.Feature}>
-        <div className={styles.FeatureIcon} />
+      {features.map(({ description, icon, title }, index) => (
+        <div className={styles.Feature} key={index}>
+          <img
+            alt={title}
+            className={styles.FeatureIcon}
+            src={icon}
+          />
 
-        <div className={styles.FeatureTitle}>
-          DECENTRALIZATION
+          <div className={styles.FeatureTitle}>
+            {title}
+          </div>
+
+          <div className={styles.FeatureDescription}>
+            {description}
+          </div>
         </div>
-
-        <div className={styles.FeatureDescription}>
-          The absence of&nbsp;a&nbsp;single center control and&nbsp;failure,
-          a&nbsp;completely self&ndash;organized network.
-        </div>
-      </div>
-
-      <div className={styles.Feature}>
-        <div className={styles.FeatureIcon} />
-
-        <div className={styles.FeatureTitle}>
-          ADVANCED SEARCH
-        </div>
-
-        <div className={styles.FeatureDescription}>
-          Parallel operation of&nbsp;many servers ensures
-          high speed of&nbsp;processing requests.
-        </div>
-      </div>
-
-      <div className={styles.Feature}>
-        <div className={styles.FeatureIcon} />
-
-        <div className={styles.FeatureTitle}>
-          MODIFIABLE
-        </div>
-
-        <div className={styles.FeatureDescription}>
-          Ability to&nbsp;edit and&nbsp;delete previously
-          posted data for&nbsp;their owner.
-        </div>
-      </div>
+      ))}
     </div>
 
     <div className={styles.More}>
@@ -73,4 +54,8 @@ const MainFeatures = () => (
   </Block>
 )
 
-export default MainFeatures;
+const mapStateToProps = ({ views }) => ({
+  features: get(views, 'main.features', []),
+})
+
+export default connect(mapStateToProps)(MainFeatures);
