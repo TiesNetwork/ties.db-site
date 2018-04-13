@@ -1,0 +1,53 @@
+.Root {
+  padding: 24px;
+}
+
+.Company {
+  &Info {
+    font-size: 12px;
+    line-height: 16px;
+    margin-top: 8px;
+  }
+}
+
+.Link {
+  color: inherit;
+  font-size: 14px;
+  line-height: 24px;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.Links {
+  align-items: flex-end;
+  display: flex;
+  flex-direction: column;
+}
+
+.Social {
+  font-size: 14px;
+
+  &Link {
+    background: #2C3E4F;
+    display: block;
+    height: 24px;
+    width: 24px;
+
+    &:not(:first-child) {
+      margin-left: 16px;
+    }
+  }
+
+  &List {
+    display: flex;
+    margin-top: 16px;
+  }
+}
+
+.Wrapper {
+  display: flex;
+  justify-content: space-between;
+}
