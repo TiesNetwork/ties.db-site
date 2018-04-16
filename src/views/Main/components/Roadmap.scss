@@ -88,3 +88,53 @@
   display: flex;
   height: 320px;
 }
+
+@media only screen and (max-width: 768px) {
+  .Item {
+    flex: 0 0 100px;
+    height: 100px;
+    width: 4px;
+
+    &:nth-child(even) {
+      .ItemContent {
+        bottom: auto;
+        flex-direction: column;
+        left: auto;
+        right: 16px;
+        text-align: right;
+        top: -6px;
+      }
+
+      .ItemDescription {
+        margin: 0 0 12px;
+      }
+    }
+
+    &Content {
+      left: 16px;
+      top: -6px;
+      width: 136px;
+    }
+
+    &Description {
+      font-size: 12px;
+      margin-top: 4px;
+    }
+
+    &Point {
+      height: 8px;
+      left: -5px;
+      top: auto;
+      width: 8px;
+    }
+
+    &Title {
+      font-size: 14px;
+    }
+  }
+
+  .List {
+    flex-direction: column;
+    height: auto;
+  }
+}
