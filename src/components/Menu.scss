@@ -95,15 +95,18 @@
     display: flex;
     text-decoration: none;
 
+    &:after {
+      content: '';
+      display: block;
+      height: 3px;
+      margin-left: 8px;
+      width: 8px;
+    }
+
     &With {
       &Caret {
         &:after {
           background: url('../views/Main/assets/arrow.svg') no-repeat center center;
-          content: '';
-          display: block;
-          height: 3px;
-          margin-left: 8px;
-          width: 8px;
         }
       }
 
@@ -123,6 +126,93 @@
 
 @media only screen and (max-width: 768px) {
   .Root {
+    flex-direction: column;
+    left: 0;
+    width: 100%;
+
+    &Opened {
+      .Actions {
+        display: flex;
+      }
+
+      .Nav {
+        display: flex;;
+      }
+    }
+  }
+
+  .Actions {
     display: none;
+    margin: 36px 0;
+  }
+
+  .Company {
+    box-sizing: border-box;
+    flex: 0 0 80px;
+    height: 80px;
+    justify-content: space-between;
+    padding: 0 24px;
+    width: 100%;
+
+    &Rate {
+      display: none;
+    }
+  }
+
+  .Hamburger {
+    background: #FFFFFF;
+    height: 24px;
+    width: 24px;
+  }
+
+  .Item {
+    flex-direction: column;
+    height: auto;
+
+    &:hover {
+      box-shadow: none;
+    }
+
+    &:not(:first-child) {
+      margin-left: 0;
+    }
+
+    &Link {
+      align-items: center;
+      background: rgba(28, 59, 79, .5);
+      border-top: 1px solid rgba(255, 255, 255, .1);
+      display: flex;
+      color: #FFFFFF;
+      font-size: 20px;
+      height: 44px;
+      justify-content: center;
+      opacity: 1;
+      width: 100%;
+
+      &:not(:first-child) {
+        margin: 0;
+      }
+    }
+
+    &Submenu {
+      position: relative;
+      top: auto;
+      width: 100%;
+    }
+
+    &Title {
+      border-top: 1px solid rgba(255, 255, 255, .1);
+      display: flex;
+      font-size: 20px;
+      height: 44px;
+      justify-content: center;
+      width: 100%;
+    }
+  }
+
+  .Nav {
+    display: none;
+    flex-direction: column;
+    width: 100%;
   }
 }

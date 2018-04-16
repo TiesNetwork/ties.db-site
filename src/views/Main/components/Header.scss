@@ -3,6 +3,15 @@
   color: #FFFFFF;
   padding: 260px 24px 160px;
   position: relative;
+
+  &WithMenu {
+    .Menu {
+      background-color: #1C3B4F;
+      height: 100%;
+      position: fixed;
+      z-index: 10;
+    }
+  }
 }
 
 .Button {
@@ -69,7 +78,7 @@
 
 @media only screen and (max-width: 768px) {
   .Root {
-    padding: 60px 24px;
+    padding: 140px 24px 60px;
   }
 
   .Button {
@@ -90,6 +99,13 @@
     box-sizing: border-box;
     flex: 1 1 auto;
     height: 40px;
+    width: 100%;
+  }
+
+  .Menu {
+    height: auto;
+    left: 0;
+    top: 0;
     width: 100%;
   }
 
