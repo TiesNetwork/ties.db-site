@@ -45,3 +45,25 @@
     cursor: pointer;
   }
 }
+
+@media only screen and (max-width: 768px) {
+  .Form {
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .Input {
+    border: 0;
+    box-sizing: border-box;
+    flex: 0 0 auto;
+    height: 40px;
+    width: 100%;
+  }
+
+  .Submit {
+    font-size: 14px;
+    height: 40px;
+    margin: 12px 0 0;
+    text-transform: uppercase;
+  }
+}

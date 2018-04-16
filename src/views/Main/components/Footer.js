@@ -1,69 +1,43 @@
-import React from 'react';
+import classNames from 'classnames';
+import { get } from 'lodash';
+import React, { createElement } from 'react';
+import { connect } from 'react-redux';
 
 /** Components **/
 import Block from 'components/Block';
 
 import styles from './Footer.scss';
 
-const MainFooter = ({ cases }) => (
+const MainFooter = ({ menu }) => (
   <Block className={styles.Root}>
     <div className={styles.Wrapper}>
       <div className={styles.Nav}>
-        <div className={styles.NavItem}>
-          <div className={styles.NavTitle}>
-            About
-          </div>
+        {menu.map(({ items, link, title }, index) => {
+          const titleClassName = classNames(styles.NavTitle, {
+            [styles.NavTitleWithCaret]: !!items,
+            [styles.NavTitleWithLink]: !!link
+          });
 
-          <a className={styles.NavLink} href="/">
-            Features
-          </a>
+          return (
+            <div className={styles.NavItem}>
+              {createElement(link ? 'a' : 'div', {
+                children: title,
+                className: titleClassName,
+                href: link,
+              })}
 
-          <a className={styles.NavLink} href="/">
-            Roadmap
-          </a>
-
-          <a className={styles.NavLink} href="/">
-            Team
-          </a>
-        </div>
-
-        <div className={styles.NavItem}>
-          <div className={styles.NavTitle}>
-            News
-          </div>
-
-          <a className={styles.NavLink} href="/">
-            Media
-          </a>
-
-          <a className={styles.NavLink} href="/">
-            Blog
-          </a>
-        </div>
-
-        <div className={styles.NavItem}>
-          <div className={styles.NavTitle}>
-            Docs
-          </div>
-
-          <a className={styles.NavLink} href="/">
-            White paper
-          </a>
-
-          <a className={styles.NavLink} href="/">
-            Yellow paper
-          </a>
-
-          <a className={styles.NavLink} href="/">
-            Short Guide
-          </a>
-        </div>
-
-        <div className={styles.NavItem}>
-          <div className={styles.NavTitle}>
-            FAQ
-          </div>
-        </div>
+              {items && (
+                <div className={styles.NavSubmenu}>
+                  {items.map(({ link, title }, index) => (
+                    <a className={styles.NavLink} href={link} key={index}>
+                      {title}
+                    </a>
+                  ))}
+                </div>
+              )}
+            </div>
+          );
+        })}
       </div>
 
       <div className={styles.Right}>
@@ -75,4 +49,8 @@ const MainFooter = ({ cases }) => (
   </Block>
 )
 
-export default MainFooter;
+const mapStateToProps = ({ views }) => ({
+  menu: get(views, 'main.menu', []),
+})
+
+export default connect(mapStateToProps)(MainFooter);

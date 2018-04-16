@@ -1,0 +1,128 @@
+.Root {
+  align-items: center;
+  display: flex;
+  height: 100%;
+}
+
+.Action {
+  align-items: center;
+  border: 2px solid #5E8896;
+  border-radius: 20px;
+  color: #FFFFFF;
+  display: flex;
+  height: 44px;
+  justify-content: center;
+  text-decoration: none;
+  width: 160px;
+}
+
+.Actions {
+  margin-left: 60px;
+}
+
+.Company {
+  align-items: center;
+  display: flex;
+  flex: 1 1 auto;
+
+  &Logo {
+    height: 40px;
+  }
+
+  &Rate {
+    border-left: 1px solid #C92A3E;
+    font-size: 14px;
+    margin-left: 16px;
+    padding-left: 16px;
+  }
+}
+
+.Item {
+  align-items: center;
+  display: flex;
+  height: 100%;
+  position: relative;
+
+  &:hover {
+    box-shadow: inset 0px 4px 0 -1px #C92A3E;
+    cursor: pointer;
+
+    .ItemSubmenu {
+      display: flex;
+    }
+
+    .ItemTitle {
+      &With {
+        &Caret {
+          &:after {
+            transform: rotate(180deg);
+          }
+        }
+      }
+    }
+  }
+
+  &:not(:first-child) {
+    margin-left: 52px;
+  }
+
+  &Link {
+    color: #FFFFFF;
+    font-size: 14px;
+    opacity: .5;
+    text-decoration: none;
+    white-space: nowrap;
+
+    &:hover {
+      opacity: 1;
+    }
+
+    &:not(:first-child) {
+      margin-top: 12px;
+    }
+  }
+
+  &Submenu {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 68px;
+  }
+
+  &Title {
+    align-items: center;
+    color: #FFFFFF;
+    display: flex;
+    text-decoration: none;
+
+    &With {
+      &Caret {
+        &:after {
+          background: url('../views/Main/assets/arrow.svg') no-repeat center center;
+          content: '';
+          display: block;
+          height: 3px;
+          margin-left: 8px;
+          width: 8px;
+        }
+      }
+
+      &Link {
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+}
+
+.Nav {
+  display: flex;
+  height: 100%;
+}
+
+@media only screen and (max-width: 768px) {
+  .Root {
+    display: none;
+  }
+}

@@ -10,7 +10,7 @@ import styles from './Features.scss';
 const MainFeatures = ({ features }) => (
   <Block
     className={styles.Root}
-    title="Key features of Ties.DB"
+    title="Key features of&nbsp;Ties.DB"
   >
     <div className={styles.Features}>
       {features.map(({ description, icon, title }, index) => (

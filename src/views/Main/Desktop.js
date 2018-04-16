@@ -5,6 +5,7 @@ import Cases from './components/Cases';
 import Copyright from './components/Copyright';
 import Features from './components/Features';
 import Footer from './components/Footer';
+import Header from './components/Header';
 import HowItWorks from './components/HowItWorks';
 import Media from './components/Media';
 import Partners from './components/Partners';
@@ -16,6 +17,7 @@ import styles from './Desktop.scss';
 
 const LandingMain = () => (
   <div className={styles.Root}>
+    <Header />
     <Features />
     <WhyNeed />
     <HowItWorks />

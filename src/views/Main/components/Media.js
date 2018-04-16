@@ -14,7 +14,7 @@ const MainMedia = ({ news }) => (
   >
     <div className={styles.List}>
       {news.map(({ date, description, icon, link, title }, index) => (
-        <div className={styles.Item}>
+        <div className={styles.Item} key={index}>
           <a className={styles.ItemTitle} href={link}>
             {title}
           </a>
