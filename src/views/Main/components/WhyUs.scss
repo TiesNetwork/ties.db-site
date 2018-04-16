@@ -1,0 +1,26 @@
+.Root {
+  background: #1C3B4F;
+  color: #FFFFFF;
+}
+
+.Image {
+  &Desktop {
+    display: block;
+  }
+
+  &Mobile {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .Image {
+    &Desktop {
+      display: none;
+    }
+
+    &Mobile {
+      display: block;
+    }
+  }
+}

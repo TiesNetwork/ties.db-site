@@ -66,3 +66,41 @@
   display: flex;
   flex-direction: column;
 }
+
+@media only screen and (max-width: 768px) {
+  .Root {
+    padding: 60px 24px;
+  }
+
+  .Button {
+    height: 40px;
+    margin: 12px 0 0;
+  }
+
+  .Form {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    margin-top: 36px;
+    width: 100%;
+  }
+
+  .Input {
+    border: 0;
+    box-sizing: border-box;
+    flex: 1 1 auto;
+    height: 40px;
+    width: 100%;
+  }
+
+  .Slogan {
+    font-size: 14px;
+    margin-top: 8px;
+  }
+
+  .Title {
+    font-size: 36px;
+    font-weight: 600;
+    line-height: 44px;
+  }
+}

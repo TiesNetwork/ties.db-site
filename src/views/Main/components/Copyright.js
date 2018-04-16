@@ -1,3 +1,4 @@
+import classNames from 'classnames';
 import { get } from 'lodash';
 import React from 'react';
 import { connect } from 'react-redux';
@@ -25,22 +26,24 @@ const MainCopyright = ({ social }) => (
       </div>
 
       <div className={styles.Social}>
-        Got questions? Ask us on our channel
+        Got questions? Ask&nbsp;us&nbsp;on&nbsp;our&nbsp;channel
 
         <div className={styles.SocialList}>
-          {social.map(({ icon, link, title }, index) => (
-            <a
-              className={styles.SocialLink}
-              href={link}
-              key={index}
-              target="_blank"
-            >
-              <img
-                alt={link}
-                src={icon}
+          {social.map(({ icon, id, link, title }, index) => {
+            const className = classNames(
+              styles.SocialLink,
+              styles[`SocialLinkType${id}`]
+            );
+
+            return (
+              <a
+                className={className}
+                href={link}
+                key={index}
+                target="_blank"
               />
-            </a>
-          ))}
+            );
+          })}
         </div>
       </div>
 
@@ -52,6 +55,12 @@ const MainCopyright = ({ social }) => (
         <a className={styles.Link} href="/">
           Terms and conditions
         </a>
+      </div>
+
+      <div className={styles.CompanyInfoMobile}>
+        Ties.BV. Limited liability company.
+        <br />
+        KvK-nummer: 69555176
       </div>
     </div>
   </Block>

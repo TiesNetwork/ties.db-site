@@ -257,37 +257,37 @@ const initialState = {
   ],
   social: [
     {
-      icon: require('../assets/social/facebook.svg'),
+      id: 'Facebook',
       link: 'https://facebook.com',
       title: 'Facebook',
     },
     {
-      icon: require('../assets/social/linkedin.svg'),
+      id: 'LinkedIn',
       link: 'https://linkedin.com/',
       title: 'LinkedIn',
     },
     {
-      icon: require('../assets/social/twitter.svg'),
+      id: 'Twitter',
       link: 'https://twitter.com',
       title: 'Twitter',
     },
     {
-      icon: require('../assets/social/youtube.svg'),
+      id: 'YouTube',
       link: 'https://youtube.com',
       title: 'YouTube',
     },
     {
-      icon: require('../assets/social/reddit.svg'),
+      id: 'Reddit',
       link: 'https://reddit.com',
       title: 'Reddit',
     },
     {
-      icon: require('../assets/social/github.svg'),
+      id: 'GitHub',
       link: 'https://github.com',
       title: 'GitHub',
     },
     {
-      icon: require('../assets/social/bitcoin.svg'),
+      id: 'Bitcoin',
       link: 'https://facebook.com',
       title: 'Bitcoin',
     },

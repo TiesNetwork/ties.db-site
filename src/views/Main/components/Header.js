@@ -24,7 +24,7 @@ const MainHeader = ({ menu }) => (
       </div>
 
       <div className={styles.Slogan}>
-        A public, distributed and decentralized database
+        A&nbsp;public, distributed and&nbsp;decentralized&nbsp;database
         <br />
         with one common thread: trust.
       </div>

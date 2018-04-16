@@ -12,6 +12,7 @@ import Partners from './components/Partners';
 import Roadmap from './components/Roadmap';
 import Subscribe from './components/Subscribe';
 import WhyNeed from './components/WhyNeed';
+import WhyUs from './components/WhyUs';
 
 import styles from './Desktop.scss';
 
@@ -21,6 +22,7 @@ const LandingMain = () => (
     <Features />
     <WhyNeed />
     <HowItWorks />
+    <WhyUs />
     <Cases />
     <Media />
     <Partners />
