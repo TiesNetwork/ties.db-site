@@ -1,0 +1,96 @@
+.Root {
+  overflow: hidden;
+
+  &WithMenu {
+    .Container {
+      filter: blur(4px);
+      margin: -4px;
+    }
+
+    .Header {
+      background-color: rgba(0, 0, 0, .2);
+      height: 100%;
+      position: fixed;
+
+      &Burger {
+        background-image: url('./assets/close.svg');
+      }
+    }
+  }
+}
+
+.Container {
+  transition: all .2s;
+}
+
+.Header {
+  display: flex;
+  flex-direction: column;
+  height: 100px;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 10;
+
+  &Container {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    height: 60px;
+    padding: 0 24px;
+  }
+
+  &Dropdown {
+    display: flex;
+    flex: 1 1 auto;
+    flex-direction: column;
+  }
+
+  &Burger {
+    background: transparent url('./assets/burger.svg') no-repeat center center;
+    border: 0;
+    height: 24px;
+    width: 24px;
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+  &Logo {
+    height: 40px;
+  }
+}
+
+.Menu {
+  flex: 1 1 auto;
+}
+
+.Rate {
+  align-items: center;
+  background: #2C3E4F;
+  color: rgba(255, 255, 255, .6);
+  display: flex;
+  flex: 0 0 40px;
+  font-size: 14px;
+  justify-content: center;
+  height: 40px;
+}
+
+.Rent {
+  display: flex;
+  justify-content: center;
+  margin: 36px 0;
+
+  &Action {
+    align-items: center;
+    border: 2px solid #5E8896;
+    border-radius: 20px;
+    color: #FFFFFF;
+    display: flex;
+    height: 44px;
+    justify-content: center;
+    text-decoration: none;
+    width: 160px;
+  }
+}

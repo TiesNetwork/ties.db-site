@@ -6,7 +6,6 @@ import { compose, withStateHandlers } from 'recompose';
 
 /** Components **/
 import Block from 'components/Block';
-import Menu from 'components/Menu';
 
 import styles from './Header.scss';
 
@@ -21,14 +20,6 @@ const MainHeader = ({
 
   return (
     <Block className={className}>
-      <div className={styles.Menu}>
-        <Menu
-          menu={menu}
-          onHamburgerClick={handleHamubrgerClick}
-          opened={menuIsOpened}
-        />
-      </div>
-
       <div className={styles.Wrapper}>
         <div className={styles.Title}>
           Discover

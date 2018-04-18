@@ -5,7 +5,7 @@ import Block from 'components/Block';
 
 import styles from './Subscribe.scss';
 
-const MainSubscribe = ({ partners }) => (
+const PageSubscribe = ({ partners }) => (
   <Block
     className={styles.Root}
     title="Keep in touch with the latest news"
@@ -24,4 +24,4 @@ const MainSubscribe = ({ partners }) => (
   </Block>
 )
 
-export default MainSubscribe;
+export default PageSubscribe;

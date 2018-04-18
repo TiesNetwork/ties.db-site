@@ -86,63 +86,6 @@ const initialState = {
       title: 'How do you know who to trust in the world of ICOs and cryptocurrencies - Ties.Network offers one possible solution ',
     },
   ],
-  menu: [
-    {
-      items: [
-        {
-          link: '/',
-          title: 'Features',
-        },
-        {
-          link: '/',
-          title: 'Roadmap',
-        },
-        {
-          link: '/',
-          title: 'Team',
-        },
-      ],
-      title: 'About',
-    },
-    {
-      items: [
-        {
-          link: '/',
-          title: 'Media',
-        },
-        {
-          link: '/',
-          title: 'Blog',
-        },
-      ],
-      title: 'News',
-    },
-    {
-      items: [
-        {
-          link: '/',
-          title: 'White paper',
-        },
-        {
-          link: '/',
-          title: 'Yellow paper',
-        },
-        {
-          link: '/',
-          title: 'Short Guide',
-        },
-      ],
-      title: 'Docs',
-    },
-    {
-      link: '/',
-      title: 'FAQ',
-    },
-    {
-      link: '/',
-      title: 'Contact',
-    },
-  ],
   partners: [
     {
       link: 'https://diwtoken.com/',

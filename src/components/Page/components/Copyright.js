@@ -8,7 +8,7 @@ import Block from 'components/Block';
 
 import styles from './Copyright.scss';
 
-const MainCopyright = ({ social }) => (
+const PageCopyright = ({ social }) => (
   <Block className={styles.Root}>
     <div className={styles.Wrapper}>
       <div className={styles.Company}>
@@ -70,4 +70,4 @@ const mapStateToProps = ({ views }) => ({
   social: get(views, 'main.social', []),
 })
 
-export default connect(mapStateToProps)(MainCopyright);
+export default connect(mapStateToProps)(PageCopyright);
