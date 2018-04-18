@@ -1,3 +1,4 @@
+import classNames from 'classnames';
 import React from 'react';
 
 /** Components **/
@@ -6,47 +7,56 @@ import Footer from './components/Footer';
 import Menu, { VARIANT } from './components/Menu';
 import Subscribe from './components/Subscribe';
 
+import { COLOR } from 'components/Page';
+
 import styles from './Desktop.scss';
 
-const Page = ({ children, menu }) => (
-  <div className={styles.Root}>
-    <div className={styles.Header}>
-      <div className={styles.HeaderLeft}>
-        <img
-          alt="Ties.DB"
-          className={styles.HeaderLogo}
-          src={require('./assets/logo.svg')}
-        />
+const Page = ({ children, color, menu }) => {
+  const className = classNames(styles.Root, {
+    [styles.RootColorDark]: color === COLOR.DARK
+  });
 
-        <div className={styles.HeaderRate}>
-          <strong>1 TIE</strong> = 0.671125$ (+12,24%)
+  return (
+    <div className={className}>
+      <div className={styles.Header}>
+        <div className={styles.HeaderLeft}>
+          <img
+            alt="Ties.DB"
+            className={styles.HeaderLogo}
+            src={require('./assets/logo.svg')}
+          />
+
+          <div className={styles.HeaderRate}>
+            <strong>1 TIE</strong> = 0.671125$ (+12,24%)
+          </div>
+        </div>
+
+        <div className={styles.HeaderCenter}>
+          <Menu
+            color={color}
+            menu={menu}
+            variant={VARIANT.DESKTOP}
+          />
+        </div>
+
+        <div className={styles.Rent}>
+          <a className={styles.RentAction} href="/">
+            Rent your drive
+          </a>
         </div>
       </div>
 
-      <div className={styles.HeaderCenter}>
-        <Menu
-          menu={menu}
-          variant={VARIANT.DESKTOP}
-        />
+      <div className={styles.Container}>
+        {children}
       </div>
 
-      <div className={styles.HeaderRight}>
-        <a className={styles.HeaderAction} href="/">
-          Rent your drive
-        </a>
+      <div className={styles.Footer}>
+        <Subscribe />
+        <Footer menu={menu} />
+        <Copyright />
       </div>
     </div>
-
-    <div className={styles.Container}>
-      {children}
-    </div>
-
-    <div className={styles.Footer}>
-      <Subscribe />
-      <Footer menu={menu} />
-      <Copyright />
-    </div>
-  </div>
-)
+  );
+}
 
 export default Page;

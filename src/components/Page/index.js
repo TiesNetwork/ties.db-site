@@ -6,6 +6,10 @@ import { compose, withStateHandlers } from 'recompose';
 import Desktop from './Desktop';
 import Mobile from './Mobile';
 
+const COLOR = {
+  DARK: 'Dark',
+}
+
 const menu = [
   {
     id: 'about',
@@ -63,3 +67,4 @@ export default compose(
     }
   )
 )(Page);
+export { COLOR };

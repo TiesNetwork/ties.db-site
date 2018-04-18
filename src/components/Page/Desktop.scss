@@ -1,3 +1,22 @@
+.Root {
+  display: flex;
+  flex-direction: column;
+
+  &Color {
+    &Dark {
+      .Header {
+        color: #1C3B4F;
+      }
+
+      .Rent {
+        &Action {
+          color: #1C3B4F;
+        }
+      }
+    }
+  }
+}
+
 .Header {
   align-items: center;
   color: #FFFFFF;
@@ -10,18 +29,6 @@
   top: 0;
   width: 1200px;
   z-index: 10;
-
-  &Action {
-    align-items: center;
-    border: 2px solid #5E8896;
-    border-radius: 20px;
-    color: #FFFFFF;
-    display: flex;
-    height: 44px;
-    justify-content: center;
-    text-decoration: none;
-    width: 160px;
-  }
 
   &Center {
     height: 100%;
@@ -46,5 +53,20 @@
 
   &Right {
     margin-left: 60px;
+  }
+}
+
+.Rent {
+  &Action {
+    align-items: center;
+    border: 2px solid #5E8896;
+    border-radius: 20px;
+    color: #FFFFFF;
+    display: flex;
+    font-weight: 500;
+    height: 44px;
+    justify-content: center;
+    text-decoration: none;
+    width: 160px;
   }
 }

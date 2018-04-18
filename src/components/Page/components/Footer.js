@@ -14,8 +14,8 @@ const PageFooter = ({ isMobile, menu }) => (
         <Menu
           menu={menu}
           variant={isMobile
-            ? VARIANT.DESKTOP_FOOTER
-            : VARIANT.MOBILE_FOOTER
+            ? VARIANT.MOBILE_FOOTER
+            : VARIANT.DESKTOP_FOOTER
           }
         />
       </div>
