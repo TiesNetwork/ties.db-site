@@ -42,6 +42,32 @@
           color: rgba(255, 255, 255, .5);
         }
       }
+
+      &Dark {
+        .Item {
+          &Active {
+            .ItemTitle {
+              color: #1C3B4F;
+            }
+          }
+
+          &Link {
+            color: #1C3B4F;
+          }
+
+          &Title {
+            color: #1C3B4F;
+
+            &With {
+              &Caret {
+                &:after {
+                  background: url('../assets/arrow-dark.svg') no-repeat center center;
+                }
+              }
+            }
+          }
+        }
+      }
     }
 
     &DesktopFooter {
@@ -183,6 +209,7 @@
   &Title {
     align-items: center;
     display: flex;
+    font-weight: 500;
     text-decoration: none;
 
     &:after {

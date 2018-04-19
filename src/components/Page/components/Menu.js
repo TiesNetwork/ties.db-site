@@ -4,6 +4,10 @@ import { compose, withStateHandlers } from 'recompose';
 
 import styles from './Menu.scss';
 
+const COLOR = {
+  DARK: 'Dark',
+};
+
 const VARIANT = {
   DESKTOP: 'Desktop',
   DESKTOP_FOOTER: 'DesktopFooter',
@@ -12,6 +16,7 @@ const VARIANT = {
 };
 
 const PageMenu = ({
+  color,
   currentId,
   handleItemClick,
   menu,
@@ -22,6 +27,7 @@ const PageMenu = ({
     [styles.RootOpened]: !!opened,
 
     [styles.RootVariantDesktop]: variant === VARIANT.DESKTOP,
+    [styles.RootVariantDesktopDark]: color === COLOR.DARK,
     [styles.RootVariantDesktopFooter]: variant === VARIANT.DESKTOP_FOOTER,
 
     [styles.RootVariantMobile]: variant === VARIANT.MOBILE || variant === VARIANT.MOBILE_FOOTER,

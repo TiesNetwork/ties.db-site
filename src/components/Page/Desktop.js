@@ -20,11 +20,14 @@ const Page = ({ children, color, menu }) => {
     <div className={className}>
       <div className={styles.Header}>
         <div className={styles.HeaderLeft}>
-          <img
-            alt="Ties.DB"
-            className={styles.HeaderLogo}
-            src={require('./assets/logo.svg')}
-          />
+          <a href="/">
+            <img
+              alt="Ties.DB"
+              className={styles.HeaderLogo}
+              src={color === COLOR.DARK ? require('./assets/logo_dark.svg') : require('./assets/logo.svg')}
+            />
+          </a>
+
 
           <div className={styles.HeaderRate}>
             <strong>1 TIE</strong> = 0.671125$ (+12,24%)

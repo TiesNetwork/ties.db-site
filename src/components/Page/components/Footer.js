@@ -7,7 +7,7 @@ import Menu, { VARIANT } from './Menu';
 
 import styles from './Footer.scss';
 
-const PageFooter = ({ isMobile, menu }) => (
+const PageFooter = ({ env: { isMobile }, menu }) => (
   <Block className={styles.Root}>
     <div className={styles.Wrapper}>
       <div className={styles.Menu}>
