@@ -38,6 +38,10 @@
     height: 48px;
     text-decoration: none;
     width: 256px;
+
+    &:hover {
+      background: #E23147;
+    }
   }
 
   &Preface {

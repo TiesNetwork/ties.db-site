@@ -20,6 +20,16 @@ const MainHeader = ({
 
   return (
     <Block className={className}>
+      <div className={styles.Cover}>
+        <video
+          autoPlay={true}
+          className={styles.CoverVideo}
+          loop={true}
+        >
+          <source src={require('../assets/header/fromRussiaWithLove.mp4')} />
+        </video>
+      </div>
+
       <div className={styles.Wrapper}>
         <div className={styles.Title}>
           Discover

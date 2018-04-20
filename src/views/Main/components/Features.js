@@ -1,3 +1,4 @@
+import classNames from 'classnames';
 import { get } from 'lodash';
 import React from 'react';
 import { connect } from 'react-redux';
@@ -21,12 +22,14 @@ const MainFeatures = ({ features }) => (
             src={icon}
           />
 
-          <div className={styles.FeatureTitle}>
-            {title}
-          </div>
+          <div className={styles.FeatureContainer}>
+            <div className={styles.FeatureTitle}>
+              {title}
+            </div>
 
-          <div className={styles.FeatureDescription}>
-            {description}
+            <div className={styles.FeatureDescription}>
+              {description}
+            </div>
           </div>
         </div>
       ))}
@@ -39,15 +42,15 @@ const MainFeatures = ({ features }) => (
     </div>
 
     <div className={styles.Actions}>
-      <a className={styles.ActionsLink} href="/">
+      <a className={styles.Action} href="/">
         Yellow paper
       </a>
 
-      <a className={styles.ActionsLink} href="/">
+      <a className={classNames(styles.Action, styles.ActionRed)} href="/">
         Short guide
       </a>
 
-      <a className={styles.ActionsLink} href="/">
+      <a className={styles.Action} href="/">
         White paper
       </a>
     </div>

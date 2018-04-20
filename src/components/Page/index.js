@@ -24,7 +24,7 @@ const menu = [
     id: 'news',
     items: [
       { link: '/', title: 'Media' },
-      { link: 'https://blog.ties.network/', title: 'Blog' },
+      { external: true, link: 'https://blog.ties.network/', title: 'Blog' },
     ],
     title: 'News',
   },
@@ -32,12 +32,12 @@ const menu = [
     id: 'docs',
     items: [
       { link: '/', title: 'White paper' },
-      { link: 'https://docs.google.com/document/d/1UwaaUgunnrFpL6jetA_DdNLQsbbqBx1HLcln07kLrUw', title: 'Yellow paper' },
-      { link: 'https://cdn.ties.network/short-guide-eng.pdf', title: 'Short Guide' },
+      { external: true, link: 'https://docs.google.com/document/d/1UwaaUgunnrFpL6jetA_DdNLQsbbqBx1HLcln07kLrUw', title: 'Yellow paper' },
+      { external: true, link: 'https://cdn.ties.network/short-guide-eng.pdf', title: 'Short Guide' },
     ],
     title: 'Docs',
   },
-  { link: 'https://kb.ties.network/', title: 'FAQ' },
+  { external: true, link: 'https://kb.ties.network/', title: 'FAQ' },
   { link: '/', title: 'Contact' },
 ];
 

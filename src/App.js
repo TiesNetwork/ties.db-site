@@ -9,7 +9,7 @@ import styles from './App.scss';
 
 const App = () => (
   <div className={styles.Root}>
-    <Route path="/" component={Main} />
+    <Route exact path="/" component={Main} />
     <Route path="/team" component={Team} />
   </div>
 )

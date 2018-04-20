@@ -11,23 +11,25 @@ const MainWhyUs = () => (
     className={styles.Root}
     title="Why us"
   >
-    <img
-      alt="Why us"
-      className={styles.ImageDesktop}
-      src={require('../assets/why_us/table.svg')}
-    />
+    <div className={styles.Wrapper}>
+      <img
+        alt="Why us"
+        className={styles.ImageDesktop}
+        src={require('../assets/why_us/table.svg')}
+      />
 
-    <img
-      alt="Why us"
-      className={styles.ImageMobile}
-      src={require('../assets/why_us/table_mob_head.svg')}
-    />
+      <img
+        alt="Why us"
+        className={styles.ImageMobile}
+        src={require('../assets/why_us/table_mob_head.svg')}
+      />
 
-    <img
-      alt="Why us"
-      className={styles.ImageMobile}
-      src={require('../assets/why_us/table_mob_body.svg')}
-    />
+      <img
+        alt="Why us"
+        className={styles.ImageMobile}
+        src={require('../assets/why_us/table_mob_body.svg')}
+      />
+    </div>
   </Block>
 )
 

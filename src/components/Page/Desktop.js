@@ -45,6 +45,10 @@ const Page = ({ children, color, menu }) => {
         <div className={styles.Rent}>
           <a className={styles.RentAction} href="/">
             Rent your drive
+
+            <div className={styles.RentTooltip}>
+              Earn money with Ties.DB
+            </div>
           </a>
         </div>
       </div>

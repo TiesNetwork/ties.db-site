@@ -63,12 +63,37 @@
     align-items: center;
     border: 2px solid #5E8896;
     border-radius: 20px;
-    color: #FFFFFF;
+    color: rgba(255, 255, 255, .7);
     display: flex;
     font-weight: 500;
     height: 44px;
     justify-content: center;
+    position: relative;
     text-decoration: none;
     width: 160px;
+
+    &:hover {
+      background: #5E8896; 
+      color: rgba(255, 255, 255, 1);
+
+      .RentTooltip {
+        display: block;
+      }
+    }
+  }
+
+  &Tooltip {
+    background: #5E8896;
+    border-radius: 20px;
+    box-sizing: border-box;
+    display: none;
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 24px;
+    left: 0;
+    padding: 12px 36px;
+    position: absolute;
+    top: 58px;
+    width: 100%;
   }
 }

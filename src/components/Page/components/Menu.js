@@ -1,5 +1,6 @@
 import classNames from 'classnames';
 import React, { createElement } from 'react';
+import { Link } from 'react-router-dom';
 import { compose, withStateHandlers } from 'recompose';
 
 import styles from './Menu.scss';
@@ -36,7 +37,7 @@ const PageMenu = ({
 
   return (
     <div className={className}>
-      {menu.map(({ id, items, link, title }, index) => {
+      {menu.map(({ external, id, items, link, title }, index) => {
         const className = classNames(styles.Item, {
           [styles.ItemActive]: currentId === id || variant === VARIANT.DESKTOP_FOOTER,
         });
@@ -52,23 +53,24 @@ const PageMenu = ({
             key={index}
             onClick={() => items && handleItemClick(id)}
           >
-            {createElement(link ? 'a' : 'div', {
+            {createElement(link ? external ? 'a' : Link : 'div', {
               children: title,
               className: titleClassName,
-              href: link,
+              href: external && link,
+              to: !external && link,
             })}
 
             {items && (
               <div className={styles.ItemSubmenu}>
-                {items.map(({ link, title }, index) => (
-                  <a
-                    className={styles.ItemLink}
-                    href={link}
-                    key={index}
-                  >
-                    {title}
-                  </a>
-                ))}
+                {items.map(({ external, link, title }, index) =>
+                  createElement(external ? 'a' : Link, {
+                    children: title,
+                    className: styles.ItemLink,
+                    key: index,
+                    href: external && link,
+                    to: !external && link,
+                  })
+                )}
               </div>
             )}
           </div>

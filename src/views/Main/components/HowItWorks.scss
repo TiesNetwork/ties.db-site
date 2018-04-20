@@ -32,6 +32,7 @@
 .Item {
   display: flex;
   flex-direction: column;
+  max-width: 320px;
 
   &Description {
     line-height: 24px;
@@ -40,7 +41,9 @@
   }
 
   &Icon {
+    display: flex;
     flex: 0 0 200px;
+    justify-content: center;
   }
 
   &Title {
@@ -80,6 +83,7 @@
   }
 
   .List {
+    align-items: center;
     display: flex;
     flex-direction: column;
   }
