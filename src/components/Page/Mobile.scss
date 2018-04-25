@@ -2,10 +2,13 @@
   overflow: hidden;
 
   &WithMenu {
+    position: fixed;
+    height: 100%;
+    width: 100%;
 
     .Container {
       filter: blur(8px);
-      margin: 0 -4px;
+      transform: scale(1.1, 1);
     }
 
     .Header {
@@ -15,6 +18,13 @@
 
       &Burger {
         background-image: url('./assets/close.svg');
+      }
+
+      &Dropdown {
+        left: 0;
+        opacity: 1;
+        position: relative;
+        visibility: visible;
       }
     }
   }
@@ -45,6 +55,11 @@
     display: flex;
     flex: 1 1 auto;
     flex-direction: column;
+    left: -9999px;
+    opacity: 0;
+    position: absolute;
+    transition: opacity 1s;
+    visibility: hidden;
   }
 
   &Burger {

@@ -39,22 +39,20 @@ const Page = ({
           />
         </div>
 
-        {menuIsOpened && (
-          <div className={styles.HeaderDropdown}>
-            <div className={styles.Menu}>
-              <Menu
-                menu={menu}
-                variant={VARIANT.MOBILE}
-              />
-            </div>
-
-            <div className={styles.Rent}>
-              <a className={styles.RentAction} href="/">
-                Rent your drive
-              </a>
-            </div>
+        <div className={styles.HeaderDropdown}>
+          <div className={styles.Menu}>
+            <Menu
+              menu={menu}
+              variant={VARIANT.MOBILE}
+            />
           </div>
-        )}
+
+          <div className={styles.Rent}>
+            <a className={styles.RentAction} href="/">
+              Rent your drive
+            </a>
+          </div>
+        </div>
       </div>
 
       <div className={styles.Container}>
