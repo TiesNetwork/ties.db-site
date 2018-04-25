@@ -15,9 +15,9 @@ import WhyUs from './components/WhyUs';
 
 import styles from './Desktop.scss';
 
-const LandingMain = () => (
+const LandingMain = props => (
   <Page className={styles.Root}>
-    <Header />
+    <Header {...props} />
     <Features />
     <WhyNeed />
     <HowItWorks />

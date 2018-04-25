@@ -1,8 +1,5 @@
 import classNames from 'classnames';
-import { get } from 'lodash';
 import React from 'react';
-import { connect } from 'react-redux';
-import { compose, withStateHandlers } from 'recompose';
 
 /** Components **/
 import Block from 'components/Block';
@@ -10,8 +7,6 @@ import Block from 'components/Block';
 import styles from './Header.scss';
 
 const MainHeader = ({
-  handleHamubrgerClick,
-  menu,
   menuIsOpened,
 }) => {
   const className = classNames(styles.Root, {
@@ -64,16 +59,4 @@ const MainHeader = ({
   );
 }
 
-const mapStateToProps = ({ views }) => ({
-  menu: get(views, 'main.menu', []),
-})
-
-export default compose(
-  connect(mapStateToProps),
-  withStateHandlers(
-    props => ({ menuIsOpened: false }),
-    {
-      handleHamubrgerClick: state => () => ({ menuIsOpened: !state.menuIsOpened }),
-    }
-  )
-)(MainHeader);
+export default MainHeader;

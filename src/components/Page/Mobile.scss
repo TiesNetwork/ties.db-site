@@ -2,9 +2,10 @@
   overflow: hidden;
 
   &WithMenu {
+
     .Container {
       filter: blur(8px);
-      margin: 0 -8px;
+      margin: 0 -4px;
     }
 
     .Header {

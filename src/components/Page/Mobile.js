@@ -1,5 +1,5 @@
 import classNames from 'classnames';
-import React from 'react';
+import React, { Children, cloneElement } from 'react';
 
 /** Components **/
 import Copyright from './components/Copyright';
@@ -58,7 +58,7 @@ const Page = ({
       </div>
 
       <div className={styles.Container}>
-        {children}
+        {Children.map(children, child => child && cloneElement(child, { menuIsOpened }))}
 
         <Subscribe />
         <Footer menu={menu} />
