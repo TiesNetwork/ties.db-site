@@ -37,7 +37,7 @@ const PageMenu = ({
 
   return (
     <div className={className}>
-      {menu.map(({ external, id, items, link, title }, index) => {
+      {menu.map(({ anchor, external, id, items, link, title }, index) => {
         const className = classNames(styles.Item, {
           [styles.ItemActive]: currentId === id || variant === VARIANT.DESKTOP_FOOTER,
         });
@@ -53,22 +53,22 @@ const PageMenu = ({
             key={index}
             onClick={() => items && handleItemClick(id)}
           >
-            {createElement(link ? external ? 'a' : Link : 'div', {
+            {createElement(link ? anchor || external ? 'a' : Link : 'div', {
               children: title,
               className: titleClassName,
-              href: external && link,
-              to: !external && link,
+              href: link,
+              to: link,
             })}
 
             {items && (
               <div className={styles.ItemSubmenu}>
-                {items.map(({ external, link, title }, index) =>
-                  createElement(external ? 'a' : Link, {
+                {items.map(({ anchor, external, link, title }, index) =>
+                  createElement(anchor || external ? 'a' : Link, {
                     children: title,
                     className: styles.ItemLink,
                     key: index,
-                    href: external && link,
-                    to: !external && link,
+                    href: link,
+                    to: link,
                   })
                 )}
               </div>

@@ -11,6 +11,7 @@ import styles from './Features.scss';
 const MainFeatures = ({ features }) => (
   <Block
     className={styles.Root}
+    id="features"
     title="Key features of&nbsp;Ties.DB"
   >
     <div className={styles.Features}>

@@ -12,6 +12,7 @@ import styles from './Roadmap.scss';
 const MainRoadmap = ({ points }) => (
   <Block
     className={styles.Root}
+    id="roadmap"
     title="Roadmap"
   >
     <div className={styles.List}>

@@ -31,6 +31,7 @@ const settings = {
 const MainMedia = ({ news }) => (
   <Block
     className={styles.Root}
+    id="media"
     title="Media"
   >
     <Slider {...settings} className={styles.Slider}>

@@ -7,12 +7,13 @@ import styles from './Block.scss';
 const Block = ({
   children,
   className: classNameProp,
+  id,
   title,
 }) => {
   const className = classNames(classNameProp, styles.Root);
 
   return (
-    <div className={className}>
+    <div className={className} id={id}>
       {title && (
         <div className={styles.Title}>
           {title}
@@ -29,6 +30,7 @@ const Block = ({
 Block.propTypes = {
   children: PropTypes.node,
   className: PropTypes.string,
+  id: PropTypes.string,
   title: PropTypes.string,
 };
 
