@@ -14,16 +14,16 @@ const menu = [
   {
     id: 'about',
     items: [
-      { anchor: true, link: '/#features', title: 'Features' },
-      { anchor: true, link: '/#roadmap', title: 'Roadmap' },
-      { anchor: true, link: '/team', title: 'Team' },
+      { anchor: true, link: `${process.env.PUBLIC_URL}/#features`, title: 'Features' },
+      { anchor: true, link: `${process.env.PUBLIC_URL}/#roadmap`, title: 'Roadmap' },
+      { link: `${process.env.PUBLIC_URL}/team`, title: 'Team' },
     ],
     title: 'About',
   },
   {
     id: 'news',
     items: [
-      { anchor: true, link: '/#media', title: 'Media' },
+      { anchor: true, link: `${process.env.PUBLIC_URL}/#media`, title: 'Media' },
       { external: true, link: 'https://blog.ties.network/', title: 'Blog' },
     ],
     title: 'News',

@@ -9,8 +9,8 @@ import styles from './App.scss';
 
 const App = () => (
   <div className={styles.Root}>
-    <Route exact path="/" component={Main} />
-    <Route path="/team" component={Team} />
+    <Route exact path={`${process.env.PUBLIC_URL}/`} component={Main} />
+    <Route path={`${process.env.PUBLIC_URL}/team`} component={Team} />
   </div>
 )
 
